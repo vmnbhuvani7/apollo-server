@@ -1,0 +1,95 @@
+# get query
+query GET_ALL_POSTS {
+  getAllPost {
+    title
+    content
+    featuredImage
+    createdAt
+    updatedAt
+  }
+}
+
+# GET_POST_BY_ID
+query GET_POST_BY_ID {
+  getPostById(id: "605c6fd63d6d48128c569186") {
+    id
+    title
+    content
+    createdAt
+    createdAt
+  }
+}
+
+# post query
+mutation CREATE_NEW_POST($title: String!, $content: String!, $featuredImage: String) {
+  createNewPost(
+    newPost: {
+      title: $title
+      content: $content
+      featuredImage: $featuredImage
+    }
+  ) {
+    title
+    content
+    featuredImage
+  }
+}
+# {
+#   "title":"post two",
+#   "content":"post two content",
+#   "featuredImage":"https://avatars.githubusercontent.com/u/17189275?s=280&v=4"
+# }
+
+# update query 
+mutation EDIT_POST_BY_ID {
+  editPostByID(
+    updatedPost: {
+      title: "updated title"
+      content: "updated content"
+      featuredImage: "updated Image"
+    },
+    id:"605c6ab77464d61251684ffc"
+  ) {
+    id
+    title
+    content
+    updatedAt
+    createdAt
+    featuredImage
+  }
+}
+
+# DELETE POST
+mutation DELETE_POST{
+  deletePost(id: "605c756787e212147daabe2a") {
+    id
+    title
+    content
+    updatedAt
+    createdAt
+    featuredImage
+  }
+}
+
+# REGISTER_NEW_USER
+mutation REGISTER_NEW_USER {
+  registerUser(
+    newUser: {
+      firstName: "vaman"
+      lastName: "bhuvani"
+      username: "vmn123"
+      password: "123456789"
+      email: "vmn123.bhuvani7@gmail.com"
+    }
+  ) {
+    user {
+      id
+      firstName
+      lastName
+      username
+      email
+      avatarImage
+    }
+    token
+  }
+}
