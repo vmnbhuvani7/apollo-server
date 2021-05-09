@@ -1,12 +1,12 @@
 {
   "name": "apollo-post-crud",
+  "author": "Vaman Bhuvani",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"
   },
-  "author": "Vaman Bhuvani",
   "license": "ISC",
   "keywords": [],
   "description": "",
